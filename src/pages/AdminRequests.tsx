@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs, updateDoc, doc, serverTimestamp, increment } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { Layout } from '../components/Layout';
-import { BookMarked, Check, X, Clock, User, BookOpen, CheckCircle } from 'lucide-react';
+import { BookMarked, Check, X, Clock, BookOpen, CheckCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const AdminRequests: React.FC = () => {

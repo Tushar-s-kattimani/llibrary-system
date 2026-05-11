@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { Layout } from '../components/Layout';
-import { Bell, BookOpen, Clock, Tag } from 'lucide-react';
+import { Bell, BookOpen, Clock } from 'lucide-react';
 
 export const StudentNotifications: React.FC = () => {
   const [notifications, setNotifications] = useState<any[]>([]);

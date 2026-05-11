@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { Layout } from '../components/Layout';
-import { Users, Search, Mail, Phone, Hash, Calendar, MapPin, CheckCircle, XCircle } from 'lucide-react';
+import { Users, Search, Mail, Phone, Hash, Calendar } from 'lucide-react';
 
 export const AdminStudents: React.FC = () => {
   const [students, setStudents] = useState<any[]>([]);

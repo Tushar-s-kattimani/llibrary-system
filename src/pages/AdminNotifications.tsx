@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, serverTimestamp } from 'firebase/firestore';
+import { deleteDoc, doc, query, orderBy, serverTimestamp, addDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { Layout } from '../components/Layout';
-import { Bell, Plus, Trash2, X, Send, Megaphone } from 'lucide-react';
+import { Bell, Trash2, X, Send, Megaphone } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const AdminNotifications: React.FC = () => {

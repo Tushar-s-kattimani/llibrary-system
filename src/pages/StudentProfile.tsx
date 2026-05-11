@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { User, Mail, Phone, MapPin, Hash, Calendar, ShieldCheck, Save } from 'lucide-react';
+import { User, Mail, Calendar, Hash, ShieldCheck, Save, GraduationCap } from 'lucide-react';
 import { Layout } from '../components/Layout';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';

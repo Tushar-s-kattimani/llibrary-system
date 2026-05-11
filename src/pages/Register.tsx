@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { User, Mail, Lock, Phone, MapPin, Hash, ArrowRight, BookOpen, UserCog, GraduationCap, Calendar, Navigation } from 'lucide-react';
+import { User, Mail, Lock, Phone, MapPin, Hash, ArrowRight, Calendar, Navigation } from 'lucide-react';
 import { auth, db } from '../firebase/config';
 import toast from 'react-hot-toast';
 

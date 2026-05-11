@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, query, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { useAuth } from '../contexts/AuthContext';
 import { Layout } from '../components/Layout';
-import { BookOpen, Search, Filter, BookMarked, Info, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Search, Filter, BookMarked, Info } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const StudentBooks: React.FC = () => {
