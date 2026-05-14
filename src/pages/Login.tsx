@@ -32,6 +32,9 @@ export const Login: React.FC = () => {
     setLoading(true);
 
     try {
+      // Clear any leftover admin bypass state before logging in as student
+      localStorage.removeItem('adminBypass');
+      
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       
@@ -41,7 +44,10 @@ export const Login: React.FC = () => {
           navigate('/verify-email');
         } else {
           toast.success('Login successful!');
-          navigate('/student');
+          // Give AuthContext time to sync the state before navigating
+          setTimeout(() => {
+            navigate('/student');
+          }, 1000);
         }
       } else {
         auth.signOut();

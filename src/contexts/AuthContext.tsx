@@ -64,7 +64,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const studentRef = doc(db, 'students', firebaseUser.uid);
         unsubscribeSnapshot = onSnapshot(studentRef, (doc) => {
           if (doc.exists()) {
-            setUserData(doc.data());
+            const data = doc.data();
+            setUserData({ ...data, role: data.role || 'student' });
           } else {
             setUserData(null);
           }
